@@ -1,0 +1,88 @@
+2015-08-04T12:33:43+00:00 DEBUG (7): exception 'Zend_Exception' with message 'dbModel read resource does not implement Zend_Db_Adapter_Abstract' in C:\xampp\htdocs\magento\lib\Varien\Data\Collection\Db.php:187
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Db\Collection\Abstract.php(134): Varien_Data_Collection_Db->setConnection(false)
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Config.php(1348): Mage_Core_Model_Resource_Db_Collection_Abstract->__construct(Array)
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Config.php(1380): Mage_Core_Model_Config->getModelInstance('wordpress_resou...', Array)
+#3 C:\xampp\htdocs\magento\app\Mage.php(491): Mage_Core_Model_Config->getResourceModelInstance('wordpress/user_...', Array)
+#4 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Model\Resource\User.php(75): Mage::getResourceModel('wordpress/user_...')
+#5 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\sql\wordpress_setup\mysql4-upgrade-3.2.0.0-3.2.0.1.php(22): Fishpig_Wordpress_Model_Resource_User->cleanDuplicates()
+#6 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(624): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(422): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '0.1.0', '4.0.0.36')
+#8 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('4.0.0.36')
+#9 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#10 C:\xampp\htdocs\magento\downloader\Maged\Controller.php(981): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#11 C:\xampp\htdocs\magento\downloader\Maged\Controller.php(420): Maged_Controller->cleanCache()
+#12 C:\xampp\htdocs\magento\downloader\Maged\Controller.php(830): Maged_Controller->cleanCacheAction()
+#13 C:\xampp\htdocs\magento\downloader\Maged\Controller.php(514): Maged_Controller->dispatch()
+#14 C:\xampp\htdocs\magento\downloader\index.php(36): Maged_Controller::run()
+#15 {main}
+2015-08-04T12:36:55+00:00 DEBUG (7): exception 'Exception' with message 'WordPress Admin details not set.' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php:31
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#4 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#5 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#6 {main}
+2015-08-04T12:39:23+00:00 DEBUG (7): exception 'Exception' with message 'CURL (28): Operation timed out after 14851 milliseconds with 47931 out of 65457 bytes received' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php:406
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php(60): Fishpig_Wordpress_Helper_System->makeHttpGetRequest('http://connect2...')
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->checkVersionAction()
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('checkVersion')
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#5 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#6 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#7 {main}
+2015-08-04T12:39:24+00:00 DEBUG (7): exception 'Exception' with message 'WordPress Admin details not set.' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php:31
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#4 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#5 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#6 {main}
+2015-08-04T12:42:36+00:00 DEBUG (7): exception 'Exception' with message 'WordPress Admin details not set.' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php:31
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#1 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#4 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#5 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#6 {main}
+2015-08-05T03:53:31+00:00 DEBUG (7): exception 'Exception' with message 'CURL (3): <url> malformed' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php:406
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php(334): Fishpig_Wordpress_Helper_System->makeHttpGetRequest('/wp-login.php')
+#1 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php(34): Fishpig_Wordpress_Helper_System->loginToWordPress('admin', 'admin123', '/wp-admin/')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#6 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}
+2015-08-05T04:08:07+00:00 DEBUG (7): exception 'Exception' with message 'CURL (3): <url> malformed' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php:406
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php(334): Fishpig_Wordpress_Helper_System->makeHttpGetRequest('/wp-login.php')
+#1 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php(34): Fishpig_Wordpress_Helper_System->loginToWordPress('NlVrI7JxH07OZV3...', 'L8nxX4e7uXowERB...', '/wp-admin/')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#6 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}
+2015-08-05T04:08:19+00:00 DEBUG (7): exception 'Exception' with message 'CURL (3): <url> malformed' in C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php:406
+Stack trace:
+#0 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\Helper\System.php(334): Fishpig_Wordpress_Helper_System->makeHttpGetRequest('/wp-login.php')
+#1 C:\xampp\htdocs\magento\app\code\community\Fishpig\Wordpress\controllers\Adminhtml\WordpressController.php(34): Fishpig_Wordpress_Helper_System->loginToWordPress('NlVrI7JxH07OZV3...', 'L8nxX4e7uXowERB...', '/wp-admin/')
+#2 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Fishpig_Wordpress_Adminhtml_WordpressController->loginAction()
+#3 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(254): Mage_Core_Controller_Varien_Action->dispatch('login')
+#4 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#5 C:\xampp\htdocs\magento\app\code\core\Mage\Core\Model\App.php(365): Mage_Core_Controller_Varien_Front->dispatch()
+#6 C:\xampp\htdocs\magento\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento\index.php(83): Mage::run('', 'store')
+#8 {main}
