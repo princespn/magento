@@ -24,18 +24,18 @@
 		 *
 		 */
 		 -->
-		<!---	<reference name="top.links">
+		<reference name="top.links">
 			<action method="addLink" translate="label title" module="wordpress" ifconfig="wordpress/toplink/enabled">
 				<label helper="wordpress/getTopLinkLabel" />
 				<url helper="wordpress/getTopLinkUrl"/>
-			<title>Blog</title>
+				<title>Blog</title>
 				<prepare>0</prepare>
 				<urlParams />
 				<position helper="wordpress/getTopLinkPosition" />
 				<li_params />
 				<a_params>class="top-link-blog"</a_params>
 			</action>
-		</reference>-->
+		</reference>
 		<!--  End of add top 'Blog' link -->
 	</default>
 	<!--
